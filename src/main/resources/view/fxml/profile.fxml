@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.urakhov.controllers.ProfileController">
+   <children>
+      <JFXDrawer />
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="300.0" stylesheets="@../css/dark_theme.css">
+         <AnchorPane prefHeight="50.0" prefWidth="300.0" styleClass="custom-header" AnchorPane.bottomAnchor="232.0">
+            <children>
+               <JFXButton fx:id="exitButton" focusTraversable="false" layoutX="224.0" layoutY="12.0" onAction="#exit" text="X" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="8.0" />
+            </children>
+         </AnchorPane>
+         <JFXButton fx:id="adminProfileButton" focusTraversable="false" layoutX="81.0" layoutY="74.0" prefHeight="50.0" prefWidth="132.0" text="Admin" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="81.0" />
+         <Label layoutX="81.0" layoutY="25.0" text="Select profile" textFill="#ffff8d" AnchorPane.bottomAnchor="182.0">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <JFXButton fx:id="pollProfileButton" focusTraversable="false" layoutX="81.0" layoutY="145.0" prefHeight="50.0" prefWidth="132.0" text="Poll" AnchorPane.bottomAnchor="37.0" />
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/dark_theme.css" />
+      <URL value="@../css/dark_theme.css" />
+   </stylesheets>
+</StackPane>

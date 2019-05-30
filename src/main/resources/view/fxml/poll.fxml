@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainRootStackPane" stylesheets="@../css/dark_theme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.urakhov.controllers.PollController">
+   <children>
+      <JFXDrawer />
+      <AnchorPane prefHeight="450.0" prefWidth="318.0" stylesheets="@../css/dark_theme.css">
+         <children>
+            <AnchorPane prefHeight="41.0" prefWidth="318.0" styleClass="custom-header" AnchorPane.bottomAnchor="400.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="exitButton" focusTraversable="false" layoutX="269.0" layoutY="4.0" onAction="#exit" text="X" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="8.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="318.0" stylesheets="@../css/dark_theme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="50.0">
+                <children>
+                      <JFXTabPane fx:id="navTabPane" prefHeight="400.0" prefWidth="318.0">
+                          <tabs>
+                              <Tab fx:id="general" closable="false" text="general">
+                                  <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@../css/dark_theme.css">
+                                          <children>
+                                              <StackPane fx:id="rootStackPane" prefHeight="373.0" prefWidth="318.0">
+                                                  <children>
+                                          <AnchorPane>
+                                             <children>
+                                                              <Label layoutX="59.0" layoutY="10.0" styleClass="common-label" text="1. What's your surname?" AnchorPane.bottomAnchor="264.0" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="89.0" />
+                                                              <JFXTextField fx:id="surnameText" layoutY="4.0" prefHeight="32.0" prefWidth="207.0" promptText="Type your answer here..." styleClass="common-label" AnchorPane.bottomAnchor="237.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0" />
+                                                              <Label layoutX="61.0" layoutY="10.0" styleClass="common-label" text="2. What's your birthday?" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="52.0" />
+                                                              <JFXButton fx:id="stepToContactButton" focusTraversable="false" layoutX="108.0" layoutY="3.0" text="Next step" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0" />
+                                                              <JFXDatePicker fx:id="birthDate" defaultColor="BLACK" layoutX="35.0" layoutY="3.0" overLay="true" prefHeight="29.0" promptText="DD.MM.YYYY" styleClass="jfx-date-picker" AnchorPane.bottomAnchor="177.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0" />
+                                                              <Label layoutX="66.0" layoutY="10.0" styleClass="common-label" text="3. What's your gender?" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="52.0" />
+                                                              <JFXRadioButton fx:id="maleRadio" layoutX="125.0" layoutY="12.0" prefHeight="16.0" prefWidth="69.0" styleClass="custom-radio-button" text="male" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="52.0" />
+                                                              <JFXRadioButton fx:id="femaleRadio" layoutX="122.0" layoutY="12.0" styleClass="custom-radio-button" text="female" AnchorPane.bottomAnchor="123.0" AnchorPane.rightAnchor="52.0" />
+                                             </children>
+                                          </AnchorPane>
+                                                  </children>
+                                              </StackPane>
+                                          </children>
+                                      </AnchorPane>
+                                  </content>
+                              </Tab>
+                              <Tab fx:id="contact" closable="false" text="contact">
+                                  <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="318.0">
+                                          <children>
+                                              <Label layoutX="50.0" layoutY="89.0" prefHeight="20.0" prefWidth="213.0" styleClass="common-label" text="1. What's your email?*" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="55.0" />
+                                              <Label layoutX="50.0" layoutY="138.0" styleClass="common-label" text="2. What's your phone number?*" wrapText="true" AnchorPane.bottomAnchor="177.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0" />
+                                              <JFXTextField fx:id="emailText" layoutX="60.0" layoutY="121.0" prefHeight="32.0" prefWidth="214.0" promptText="Type your answer here..." styleClass="common-label" AnchorPane.bottomAnchor="224.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </JFXTextField>
+                                              <JFXTextField fx:id="phoneText" layoutX="60.0" layoutY="175.0" promptText="Type your answer here..." styleClass="common-label" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="52.0">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </JFXTextField>
+                                              <JFXButton fx:id="stepToPollButton" focusTraversable="false" layoutX="223.0" layoutY="289.0" text="Next step" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0" />
+                                              <JFXButton fx:id="stepToGeneralButton" focusTraversable="false" layoutX="20.0" layoutY="289.0" text="Prev step" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="26.0" />
+                                    <Label layoutX="52.0" layoutY="196.0" styleClass="common-label" text="+7" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="52.0" />
+                                    <Label layoutX="13.0" layoutY="43.0" prefHeight="50.0" prefWidth="292.0" styleClass="axis-label" text="* these fields are not necessary to fill" wrapText="true" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0" />
+                                          </children>
+                                      </AnchorPane>
+                                  </content>
+                              </Tab>
+                        <Tab fx:id="firstSongTab" closable="false" text="poll">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="firstSongText" layoutX="26.0" layoutY="182.0" prefHeight="33.0" prefWidth="267.0" promptText="Type the name of your favourite song..." styleClass="common-label" AnchorPane.bottomAnchor="157.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="182.0" />
+                                    <JFXComboBox fx:id="firstSongGenre" layoutX="26.0" layoutY="149.0" prefHeight="26.0" prefWidth="100.0" promptText="Genre" styleClass="combo-box-popup" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="149.0" />
+                                    <JFXComboBox fx:id="firstSongStyle" layoutX="158.0" layoutY="149.0" prefHeight="26.0" prefWidth="134.0" promptText="Style" styleClass="combo-box-popup" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="149.0" />
+                                    <Label layoutX="52.0" layoutY="67.0" prefHeight="47.0" prefWidth="348.0" styleClass="text-field" text="1. Specify the 1st of your favorite songs" wrapText="true" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="67.0">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="toSecondSongButton" focusTraversable="false" layoutX="223.0" layoutY="289.0" text="Next step" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0" />
+                                    <JFXSlider fx:id="firstSongRating" layoutX="146.0" layoutY="234.0" min="1.0" prefHeight="16.0" prefWidth="146.0" styleClass="jfx-slider" AnchorPane.bottomAnchor="123.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="234.0" />
+                                    <Label layoutX="31.0" layoutY="230.0" prefHeight="20.0" prefWidth="108.0" styleClass="common-label" text="Song rating:" textFill="#4d4d4d" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="26.0" />
+                                    <JFXButton fx:id="backToContactButton" focusTraversable="false" layoutX="23.0" layoutY="289.0" text="Prev step" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="26.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="secondSongTab" closable="false" text="poll">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="secondSongText" prefHeight="26.0" prefWidth="266.0" promptText="Type the name of your favourite song..." AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="182.0" />
+                                    <JFXComboBox fx:id="secondSongGenre" layoutX="52.0" layoutY="139.0" prefHeight="26.0" prefWidth="100.0" promptText="Genre" styleClass="combo-box-popup" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="149.0" />
+                                    <JFXComboBox fx:id="secondSongStyle" layoutX="159.0" layoutY="139.0" prefHeight="26.0" prefWidth="134.0" promptText="Style" styleClass="combo-box-popup" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="149.0" />
+                                    <Label layoutX="52.0" layoutY="67.0" styleClass="common-label" text="2. Specify the 2nd of your favorite songs" wrapText="true" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="67.0">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="toThirdSongButton" focusTraversable="false" layoutX="226.0" layoutY="289.0" styleClass="poll-buttons" text="Next step" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0" />
+                                    <JFXSlider fx:id="secondSongRating" layoutX="154.0" layoutY="234.0" min="1.0" prefHeight="16.0" prefWidth="138.0" AnchorPane.bottomAnchor="123.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="234.0" />
+                                    <Label layoutX="36.0" layoutY="225.0" prefHeight="20.0" prefWidth="106.0" styleClass="common-label" text="Song rating:" textFill="#4d4d4d" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="230.0" />
+                                    <JFXButton fx:id="backToFirstSongButton" focusTraversable="false" layoutX="23.0" layoutY="289.0" styleClass="poll-buttons" text="Prev step" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="26.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="thirdSongTab" closable="false" text="poll">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="thirdSongText" prefHeight="26.0" prefWidth="266.0" promptText="Type the name of your favourite song..." AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="182.0" />
+                                    <JFXComboBox fx:id="thirdSongGenre" layoutX="52.0" layoutY="139.0" prefHeight="26.0" prefWidth="100.0" promptText="Genre" styleClass="combo-box-popup" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="149.0" />
+                                    <JFXComboBox fx:id="thirdSongStyle" layoutX="159.0" layoutY="139.0" prefHeight="26.0" prefWidth="134.0" promptText="Style" styleClass="combo-box-popup" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="149.0" />
+                                    <Label layoutX="52.0" layoutY="68.0" styleClass="text-field" text="3. Specify the 3rd of your favorite songs" wrapText="true" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="67.0">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="toFourthSongButton" focusTraversable="false" layoutX="226.0" layoutY="289.0" styleClass="poll-buttons" text="Next step" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0" />
+                                    <JFXSlider fx:id="thirdSongRating" layoutX="153.0" layoutY="234.0" min="1.0" prefHeight="16.0" prefWidth="139.0" AnchorPane.bottomAnchor="123.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="234.0" />
+                                    <Label layoutX="36.0" layoutY="225.0" prefHeight="20.0" prefWidth="107.0" styleClass="common-label" text="Song rating:" textFill="#4d4d4d" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="230.0" />
+                                    <JFXButton fx:id="backToSecondSongButton" focusTraversable="false" layoutX="31.0" layoutY="289.0" styleClass="poll-buttons" text="Prev step" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="26.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="fourthSongTab" closable="false" text="poll">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="fourthSongText" prefHeight="26.0" prefWidth="266.0" promptText="Type the name of your favourite song..." AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="182.0" />
+                                    <JFXComboBox fx:id="fourthSongGenre" layoutX="52.0" layoutY="139.0" prefHeight="26.0" prefWidth="100.0" promptText="Genre" styleClass="combo-box-popup" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="149.0" />
+                                    <JFXComboBox fx:id="fourthSongStyle" layoutX="159.0" layoutY="139.0" prefHeight="26.0" prefWidth="134.0" promptText="Style" styleClass="combo-box-popup" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="149.0" />
+                                    <Label layoutX="52.0" layoutY="67.0" styleClass="common-label" text="4. Specify the 4th of your favorite songs" wrapText="true" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="67.0">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="toFifthSongButton" focusTraversable="false" layoutX="201.0" layoutY="289.0" text="Next step" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0" />
+                                    <JFXSlider fx:id="fourthSongRating" layoutX="152.0" layoutY="234.0" min="1.0" prefHeight="16.0" prefWidth="140.0" styleClass="jfx-slider" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="234.0" />
+                                    <Label layoutX="36.0" layoutY="225.0" prefHeight="20.0" prefWidth="103.0" styleClass="common-label" text="Song rating:" textFill="#4d4d4d" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="230.0" />
+                                    <JFXButton fx:id="backToThirdSongButton" focusTraversable="false" layoutX="23.0" layoutY="289.0" text="Prev step" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="26.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="fifthSongTab" closable="false" text="poll">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <StackPane fx:id="finalRootStackPane" prefHeight="373.0" prefWidth="318.0">
+                                       <children>
+                                          <AnchorPane fx:id="lastAnchorPane" prefHeight="363.0" prefWidth="318.0">
+                                             <children>
+                                                <JFXTextField fx:id="fifthSongText" layoutX="26.0" layoutY="138.0" prefHeight="26.0" prefWidth="266.0" promptText="Type the name of your favourite song..." AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="182.0" />
+                                                <JFXComboBox fx:id="fifthSongGenre" layoutX="34.0" layoutY="138.0" prefHeight="26.0" prefWidth="100.0" promptText="Genre" styleClass="combo-box-popup" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="149.0" />
+                                                <JFXComboBox fx:id="fifthSongStyle" layoutX="159.0" layoutY="138.0" prefHeight="26.0" prefWidth="134.0" promptText="Style" styleClass="combo-box-popup" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="149.0" />
+                                                <Label layoutX="52.0" layoutY="67.0" styleClass="common-label" text="5. Specify the 5th of your favorite songs" wrapText="true" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="67.0">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton fx:id="finisPollButton" focusTraversable="false" layoutX="214.0" layoutY="288.0" prefHeight="26.0" prefWidth="90.0" text="Finish" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="26.0" />
+                                                <JFXSlider fx:id="fifthSongRating" layoutX="151.0" layoutY="234.0" min="1.0" prefHeight="16.0" prefWidth="141.0" AnchorPane.bottomAnchor="123.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="234.0" />
+                                                <Label layoutX="39.0" layoutY="232.0" prefHeight="20.0" prefWidth="111.0" styleClass="common-label" text="Song rating:" textFill="#4d4d4d" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="230.0" />
+                                                <JFXButton fx:id="backToFourthSongTab" focusTraversable="false" layoutX="19.0" layoutY="288.0" text="Prev step" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="26.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                          </tabs>
+                      </JFXTabPane>
+                  <JFXBadge />
+                </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

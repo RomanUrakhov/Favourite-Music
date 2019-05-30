@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="575.0" prefWidth="1000.0" stylesheets="@../css/dark_theme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.urakhov.controllers.AnalyzerController">
+   <children>
+      <BarChart fx:id="totalRatingChart" barGap="1.0" categoryGap="0.0" layoutX="14.0" layoutY="14.0" legendVisible="false" prefHeight="283.0" prefWidth="500.0" title="The most popular songs">
+        <xAxis>
+          <CategoryAxis fx:id="categoryAxis" prefHeight="31.0" prefWidth="288.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="numberAxis" label="Rating" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <PieChart fx:id="genreTotalRatingPieChart" layoutX="518.0" layoutY="14.0" legendVisible="false" prefHeight="274.0" prefWidth="468.0" stylesheets="@../css/dark_theme.css" title="Genre popularity" />
+   </children>
+</AnchorPane>

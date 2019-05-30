@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1000.0" stylesheets="@../css/dark_theme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.urakhov.controllers.AdminController">
+   <children>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" resizableOnDrag="true" resizeContent="true">
+         <StackPane.margin>
+            <Insets top="50.0" />
+         </StackPane.margin>
+      </JFXDrawer>
+      <AnchorPane fx:id="rootAnchorPane" prefHeight="200.0" prefWidth="200.0" styleClass="main-page">
+         <children>
+            <AnchorPane fx:id="headerPane" prefHeight="200.0" prefWidth="1000.0" styleClass="custom-header" AnchorPane.bottomAnchor="575.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXHamburger fx:id="hamburger" styleClass="jfx-hamburger-icon" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="8.0" />
+                  <JFXButton fx:id="mainPageButton" focusTraversable="false" layoutX="53.0" onAction="#openMainPage" prefHeight="50.0" prefWidth="175.0" styleClass="header-button" text="main page" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="0.0" />
+                  <JFXButton fx:id="analyzerButton" focusTraversable="false" layoutX="200.0" onAction="#openAnalyzingPage" prefHeight="50.0" prefWidth="175.0" styleClass="header-button" text="analyzer" AnchorPane.leftAnchor="239.0" />
+                  <JFXButton fx:id="exitButton" focusTraversable="false" layoutX="949.0" layoutY="8.0" onAction="#exit" text="X" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="8.0" />
+               </children>
+            </AnchorPane>
+            <BorderPane fx:id="contentBorderPane" layoutX="28.0" layoutY="67.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <center>
+                  <AnchorPane fx:id="greetingsPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/dark_theme.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-5.0" layoutY="177.0" styleClass="welcome-label" text="Welcome to  Poll Master" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="5.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="250.0" styleClass="welcome-label" text=" Here you can analyze  people's musical preferences" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </center></BorderPane>
+         </children></AnchorPane>
+   </children>
+</StackPane>

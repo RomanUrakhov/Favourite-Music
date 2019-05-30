@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="loginRootStackPane" prefHeight="278.0" prefWidth="300.0" stylesheets="@../css/dark_theme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.urakhov.controllers.AuthController">
+   <children>
+      <JFXDrawer />
+      <AnchorPane fx:id="mainContent" prefHeight="266.0" prefWidth="300.0">
+         <children>
+            <AnchorPane prefHeight="41.0" prefWidth="300.0" styleClass="custom-header">
+               <children>
+                  <JFXButton fx:id="exitButton" focusTraversable="false" layoutX="224.0" layoutY="7.0" onAction="#exit" text="X" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="8.0" />
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="loginText" focusTraversable="false" labelFloat="true" layoutX="47.0" layoutY="90.0" promptText="username" styleClass="text-field" unFocusColor="#b2b2b2" AnchorPane.bottomAnchor="155.0" AnchorPane.topAnchor="90.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="loginButton" focusTraversable="false" layoutX="47.0" layoutY="170.0" onAction="#login" text="Login" AnchorPane.bottomAnchor="28.0" />
+            <JFXButton fx:id="cancelButton" focusTraversable="false" layoutX="174.0" layoutY="170.0" onAction="#cancel" text="Cancel" AnchorPane.bottomAnchor="28.0" />
+            <JFXPasswordField fx:id="passwordText" focusTraversable="false" labelFloat="true" layoutX="47.0" layoutY="139.0" promptText="password" unFocusColor="#b2b2b2" AnchorPane.bottomAnchor="106.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

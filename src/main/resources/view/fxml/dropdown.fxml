@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="418.0" prefWidth="186.0" stylesheets="@../css/dark_theme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.urakhov.controllers.ToolBarController">
+   <children>
+      <JFXButton fx:id="ratingsButton" accessibleText="ratings" focusTraversable="false" maxHeight="Infinity" maxWidth="1.7976931348623157E308" onAction="#loadRatingTable" prefWidth="186.0" styleClass="toolbar-button" stylesheets="@../css/dropdown.css" text="Ratings" VBox.vgrow="ALWAYS" />
+      <JFXButton id="toolbar-button" fx:id="respondentsButton" accessibleText="respondents" focusTraversable="false" maxHeight="Infinity" maxWidth="1.7976931348623157E308" onAction="#loadRespondentTable" prefWidth="186.0" styleClass="toolbar-button" stylesheets="@../css/dropdown.css" text="Respondents" VBox.vgrow="ALWAYS" />
+      <JFXButton fx:id="songsButton" accessibleText="songs" focusTraversable="false" maxHeight="Infinity" maxWidth="1.7976931348623157E308" onAction="#loadSongTable" prefWidth="186.0" styleClass="toolbar-button" stylesheets="@../css/dropdown.css" text="Songs" VBox.vgrow="ALWAYS" />
+      <JFXButton fx:id="stylesButton" accessibleText="styles" focusTraversable="false" maxHeight="Infinity" maxWidth="1.7976931348623157E308" onAction="#loadStyleTable" prefWidth="186.0" styleClass="toolbar-button" stylesheets="@../css/dropdown.css" text="Styles" VBox.vgrow="ALWAYS" />
+      <JFXButton fx:id="genresButton" accessibleText="genres" focusTraversable="false" maxHeight="Infinity" maxWidth="1.7976931348623157E308" onAction="#loadGenreTable" prefWidth="186.0" styleClass="toolbar-button" stylesheets="@../css/dropdown.css" text="Genres" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane" prefHeight="575.0" prefWidth="1000.0" stylesheets="@../../css/dark_theme.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.urakhov.controllers.tables.CategoriesController">
+    <children>
+        <AnchorPane id="AnchorPane" fx:id="contentPane" prefHeight="284.0" prefWidth="601.0" stylesheets="@../../css/dark_theme.css">
+            <children>
+            <JFXTabPane fx:id="navTab" maxHeight="575.0" prefHeight="575.0" prefWidth="1000.0">
+               <tabs>
+                  <Tab fx:id="generalTab" closable="false" text="General Chart">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="menTab" closable="false" text="Men Chart">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="womenTab" text="Women Chart">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tenTab" text="10-15 years old Chart">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="sixteenTab" text="16-21 years old Chart">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="twentytwoTab" text="22-35 years old Chart">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="thirtysixTab" text="36-60 years old Chart">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
